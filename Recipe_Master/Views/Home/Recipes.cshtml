@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!-- Hero Section -->
+<div class="container text-center my-5">
+    <h1>Find Your Favorite Recipe</h1>
+    <p class="lead">Browse delicious recipes and discover new favorites.</p>
+
+    <!-- Search Bar -->
+    <div class="input-group w-50 mx-auto">
+        <input type="text"
+               class="form-control"
+               id="searchInput"
+               placeholder="Search recipes..." />
+        <button class="btn btn-outline-success bg-mycolor text-white"
+                onclick="searchRecipes()">
+            Search
+        </button>
+    </div>
+</div>
+
+<!-- Recipe List -->
+<div class="container">
+    <div class="row" id="recipeList">
+        <!-- Recipe Cards will be dynamically inserted here -->
+    </div>
+</div>
+
+<div class="container text-center my-5">
+    <h1>Go to a model of how a Recipe would look like</h1>
+    <a href="recipe-details.html"
+       class="btn btn-outline-success bg-mycolor text-white my-2">Go There!</a>
+</div>

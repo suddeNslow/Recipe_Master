@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Recipe_Master</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="bg-white text-black d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-mycolor sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/logo.png"
+                     class="img-fluid ms-3"
+                     style="max-height: 50px" 
+                     asp-append-version="true" />
+                Recipe Master
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item nav-li">
+                        <a class="nav-link text-white px-3 @(ViewContext.RouteData.Values["Action"].ToString() == "Index" && ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")"
+                           asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item nav-li">
+                        <a class="nav-link text-white px-3 @(ViewContext.RouteData.Values["Action"].ToString() == "Recipes" && ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")"
+                           asp-area="" asp-controller="Home" asp-action="Recipes">Recipes</a>
+                    </li>
+                    <li class="nav-item nav-li">
+                        <a class="nav-link text-white px-3 @(ViewContext.RouteData.Values["Action"].ToString() == "About" && ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")"
+                           aria-current="page"
+                           asp-area="" asp-controller="Home" asp-action="About">About</a>
+                    </li>
+                    <li class="nav-item nav-li">
+                        <a class="nav-link text-white px-3 @(ViewContext.RouteData.Values["Action"].ToString() == "Contact" && ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")"
+                           asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                    </li>
+                    <li class="nav-item nav-li bg-accent px-3 rounded">
+                        <a class="nav-link text-white"
+                           asp-area="" asp-controller="Home" asp-action="Login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p class="mb-1">Thank you for visiting Recipe Master!</p>
+        <p class="mb-0">&copy; 2025 Recipe Master. All rights reserved.</p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
+
+<a class="nav-link text-white @(ViewContext.RouteData.Values["Action"].ToString() == "Login" && ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")" 

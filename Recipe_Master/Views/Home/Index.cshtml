@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Hero Section -->
+<div class="container my-5 text-center">
+    <h1>Welcome to my Recipe website!</h1>
+    <p class="lead">Incredible recipes done by Recipe Master</p>
+</div>
+
+<!-- Cards Showcase -->
+<div class="container">
+    <div class="row gy-3">
+        <!-- Top image: Full width on small screens, 1/4 width on large screens -->
+        <div class="col-12 col-lg-3">
+            <img src="~/food1.jpg" class="img-fluid top-image" />
+        </div>
+        <!-- Remaining 3 images: Below top image on small screens, in same row on large screens -->
+        <div class="col-4 col-lg-3">
+            <img src="~/food2.jpg" class="img-fluid w-100" />
+        </div>
+        <div class="col-4 col-lg-3">
+            <img src="~/food3.jpg" class="img-fluid w-100" />
+        </div>
+        <div class="col-4 col-lg-3">
+            <img src="~/food4.jpg" class="img-fluid w-100" />
+        </div>
+    </div>
+</div>
+
+<!-- Search Bar -->
+<div class="container my-5 text-center">
+    <h1 class="text-center">These are some of my Recipes!</h1>
+    <p class="lead">
+        You like how they look?<br />
+        Search for more here!
+    </p>
+
+    <div class="input-group w-50 mx-auto">
+        <input type="text"
+               class="form-control"
+               id="searchInput"
+               placeholder="Search recipes..." />
+        <button class="btn btn-outline-success bg-mycolor text-white"
+                onclick="redirectToSearch()">
+            Search
+        </button>
+    </div>
+</div>
